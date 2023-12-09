@@ -1,0 +1,53 @@
+<div class="bill-container">
+
+    @for (bill of bills; track bill; let i=$index) {
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title class="shop-title">{{shop.name}}</mat-card-title>
+                <mat-card-subtitle>Shop-Address: {{shop.address}}</mat-card-subtitle>
+                <mat-card-subtitle>Shop-Contact: {{shop.mobNo}}</mat-card-subtitle>
+                <mat-card-title class="customer-name">Customer Name : {{customerDetails.name}}</mat-card-title>
+                <mat-card-subtitle>Customer Address : {{customerDetails.address}}</mat-card-subtitle>
+                <mat-card-subtitle><span>Date</span> : {{bill.date}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <hr>
+                <table>
+                    <thead>
+                        <th>No.</th>
+                        <th width="200px">Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                    </thead>
+                    <tbody>
+                       
+                        @for (product of bill.orderedItem; track product; let i=$index) {
+                        <tr>
+                            <td>{{i+1}}</td>
+                            <td>{{product.productName}}</td>
+                            <td>{{product.productPrice}}/kg</td>
+                            <td>{{product.quantity}}</td>
+                            <td>{{product.productPrice*product.quantity}}</td>
+                            
+                        </tr>
+                        }
+                       
+                    </tbody>
+                </table>
+                <hr>
+                <div class="total">
+                    Total : <span class="total-amount">{{bill.totalPrice}}.00</span>
+                </div>
+                <hr>
+                <div class="paid">
+                    Amount Paid : <span>{{bill.amtPaid}}.00</span>
+                </div>
+                <div class="balance">
+                    Balance Amt : <span> {{bill.totalPrice-bill.amtPaid}}.00</span>
+                </div>
+            </mat-card-content>
+        </mat-card>
+     }
+   
+</div>

@@ -1,0 +1,29 @@
+
+<form (ngSubmit)="addProduct()" class="addProduct p-2">   
+     <h1 mat-dialog-title>Add New Product</h1>
+    <mat-form-field appearance="outline">
+        <mat-label>Product Name</mat-label>
+        <input [(ngModel)]="product.name" name="name" matInput placeholder="Enter product name">
+        <mat-icon matSuffix>Vegetable</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Price</mat-label>
+        <input [(ngModel)]="product.price" name="price" matInput placeholder="Enter product price">
+        <mat-icon matSuffix>money</mat-icon>
+    </mat-form-field>
+
+    <div class="image">
+        <button type="button" mat-raised-button (click)="fileInput.click()">Choose Product Image<mat-icon matSuffix>image</mat-icon></button>
+<input  name="image" hidden (change)="onFileSelected($event)" #fileInput type="file">
+<span class="file-name">{{productImage?.name}}</span>
+    </div> 
+     <div class="progess-bar">
+        <mat-progress-bar *ngIf(flag) color="warn" mode="indeterminate"></mat-progress-bar>
+     </div>
+    <button mat-dialog-close mat-raised-button color="warning">Close</button>
+    <button type="submit" mat-raised-button color="warn">Add Product</button>
+
+   
+</form>
+

@@ -1,0 +1,57 @@
+
+
+<div class="header">
+    <mat-toolbar >
+        <div class="nav-item">           
+            <ul>
+                <li><a routerLink="" class="active"><span>Login</span></a></li> 
+                <li><a routerLink="registerShop" >Register</a></li>                  
+            </ul>
+        </div>
+    </mat-toolbar>
+</div>
+
+
+<div class="login-comp" id="login-comp">
+    <div class="container-fluid">
+        <form   (ngSubmit)="formSubmit()" class="loginForm">
+            <h1>Login Form</h1>
+
+            
+            
+            <mat-form-field appearance="outline">
+                <mat-label>Email id</mat-label>
+                <input [(ngModel)] = "loginData.email" name="email" matInput placeholder="Enter email" >
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input [(ngModel)] = "loginData.password" name="password" matInput placeholder="Enter password" >
+                <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+
+        
+            <div class="radio-btn">
+                <label>Login as :</label>
+                <mat-radio-group [(ngModel)]="loginData.role" name="role" aria-label="Login as">
+                    <mat-radio-button value="customer">Customer</mat-radio-button>
+                    <mat-radio-button value="shopowner">Shopowner</mat-radio-button>
+                  </mat-radio-group>
+            </div>
+            
+            
+            <div class="forget-password">
+                <a href="">Forgot Password?</a>
+            </div>
+
+            <button  type="submit" mat-raised-button color="warn">Login</button>
+            
+            <hr>
+            <div >
+                <span>Wan't to create new shop ? <a routerLink="registerShop" >Create New</a></span>
+            </div>
+        </form>
+        
+        </div>
+        
+</div>

@@ -1,0 +1,92 @@
+.cart-container{
+    background-color: #ededea;
+    padding-bottom: 50px;
+}
+
+.cart{
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: white;
+    padding-bottom: 20px;
+}
+mat-form-field{
+    width: 300px;
+    margin: 0 5%;
+  
+}
+
+
+
+th{
+    border-bottom: 1px solid black;
+    padding: 15px;
+
+}
+
+td{
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1.4px ridge ;
+    font-size: small;
+
+}
+td button{
+    font-size: 12px;
+   
+}
+
+td img{
+    width: 150px;
+    border-radius: 50%;
+}
+
+
+table{
+     width: 100%;
+    font-size: larger;
+    font-weight: 300;   
+}
+
+.total{
+   padding-right: 100px;
+    text-align: right;
+    font-size: large;
+}
+.total span{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+}
+
+.cart-footer{
+    width: 90%;
+    text-align: right;
+   
+}
+.cart-footer button{
+    margin: 0px 20px;
+    
+}
+
+.quantity span{
+    border: 2px solid;
+    padding: 5px 20px;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.quantity input{
+    border: 2px solid;
+    padding: 5px 20px;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 40px;
+}
+
+.minus, .plus{
+    background-color: rgb(233, 219, 20);
+    color: white;
+    cursor: pointer;
+}

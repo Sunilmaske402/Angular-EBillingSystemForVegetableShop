@@ -1,0 +1,62 @@
+<div class="cart-container">
+  
+<div class="cart">   
+  <table [cellSpacing]="0" [cellPadding]="5">
+    <thead>
+      <th>Sr.No.</th>
+      <th width="200px">Image</th>
+      <th width="200px">Name</th>
+      <th>Price</th>
+      <th >Quantity</th>
+      <th >Amount</th>
+      <th>Remove</th>
+      
+    </thead>
+      <tbody>
+        @for (product of cart; track product; let i=$index ) {
+          <tr>
+              <td>{{i+1}}</td>
+              <td><img src="{{imageUrl+product.pid}}" alt=""></td>
+              <td>{{product.productName}}</td>
+              <td>{{product.productPrice}}/kg</td>
+              <td class="quantity"> 
+               <input (change)="setQuantity(product.pid, $event)" type="text" value="{{product.quantity}}">
+                <span  class="plus">Kg</span>
+              </td>
+              <td>{{(product.productPrice)*(product.quantity)}}</td>
+              <td>
+                <button (click)="removeItemOfCart(product.pid)" mat-mini-fab color="warn" aria-label="Example icon button with a delete icon">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </td>
+          </tr>
+        }
+      </tbody>
+  </table>
+  <hr>
+          <div class="total">
+              Total : <span class="total-amount">{{totalAmt}}</span>
+          </div>    
+  </div>
+
+  <div *ngIf="totalAmt!=0" class="cart-footer"> 
+
+    <mat-form-field  appearance="outline">
+      <mat-label>Select Customer</mat-label>
+      <mat-select [(ngModel)]="selectedCustomerId" name="customer">   
+        @for (customer of CustomerList; track $index) {
+          <mat-option [value]="customer.id">{{customer.name}}</mat-option>
+        }        
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Paid Amount</mat-label>
+      <input [(ngModel)]="amtPaid" required matInput placeholder="Paid Amount">
+      <mat-icon matSuffix>money</mat-icon>
+  </mat-form-field>
+
+    <button  mat-raised-button color="warn" (click)="clearCart()" >   <mat-icon>wash</mat-icon>Clear Cart</button>
+    <button  mat-raised-button  (click)="placeOrder()" >   <mat-icon>done</mat-icon>Place Order</button>
+  </div>
+</div>

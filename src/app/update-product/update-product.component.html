@@ -1,0 +1,22 @@
+<form (ngSubmit)="updateProduct()"  class="updateProduct p-2">   
+    <h1 mat-dialog-title>Update Product</h1>
+   <mat-form-field appearance="outline">
+       <mat-label>Product Name</mat-label>
+       <input [(ngModel)]="product.name"  name="name" matInput >
+       <mat-icon matSuffix>Vegetable</mat-icon>
+   </mat-form-field>
+
+   <mat-form-field appearance="outline">
+       <mat-label>Price</mat-label>
+       <input [(ngModel)]="product.price" name="price" matInput placeholder="Enter product price">
+       <mat-icon matSuffix>money</mat-icon>
+   </mat-form-field>
+
+   
+   <div class="buttons">
+            <button mat-dialog-close mat-raised-button color="warning">Close</button>
+            <button type="submit" (click)="updateProduct()" mat-raised-button color="warn">Update Product</button>
+        </div>
+  
+</form>
+

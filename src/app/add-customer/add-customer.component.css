@@ -1,0 +1,30 @@
+.container{
+    background-image: url(../../assets/images/back-img.jpg);
+    height: 90%;
+}
+.form-container{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.31);
+}
+
+form{
+    background-color: white;
+    border-radius: 7px;
+    text-align: center;
+    padding: 20px;
+}
+
+mat-form-field{
+    margin: 10px;
+}
+
+button{
+    margin: 10px;
+}
+
+hr{
+    margin: 20px;
+}

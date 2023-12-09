@@ -1,0 +1,89 @@
+.product-container{
+    min-height: 100%;
+    width: 100%;
+    background-color: #ededea;
+   display: flex;
+   flex-wrap: wrap;
+   padding: 20px;
+}
+
+
+.example-card{
+    margin: 20px;
+    height: fit-content;
+}
+
+mat-card-title{
+    padding: 5px 15px;
+   border: 1px solid rgb(151, 5, 5);
+   color:  rgb(151, 5, 5);
+   border-radius: 8px;
+}
+
+mat-card{
+    align-items: center;
+}
+mat-card img{
+    margin-top: 8px;
+    width: 180px;
+    height: 180px;
+    border-radius: 10%;
+    border : 3px solid black;
+}
+
+mat-card-content{
+    margin: 20px 0px ;
+    text-align: center;
+}
+.price-head{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.price{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+mat-card-actions{
+    margin-bottom: 10px;
+}
+mat-card-actions button{
+    margin: 5px;
+}
+
+.add-product button{
+    background-image: linear-gradient(90deg, #fa80d2, #fed757);
+    color: white;
+    margin: 20px 30px 0px;
+    font-size: large;
+    padding: 20px;
+}
+
+.delete{
+  color: #FF9800;
+   border-radius: 50%;
+   border: 1px solid;
+   background-color: white;
+   cursor: pointer;
+}
+
+.delete-div{
+    padding: 3px 5px 0px 0px;
+    width: 100%;
+    text-align: right;
+}
+
+
+/* Add Product dialog css */
+.addProduct{
+    text-align: center;
+    padding: 20px;
+}
+mat-form-field{
+    width: 75%;
+}
+
+
+
+.addProduct button{
+    margin: 20px 10px;
+}

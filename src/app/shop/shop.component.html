@@ -1,0 +1,21 @@
+<div class="container">
+    <mat-toolbar >
+        <span class="shop-name">{{shopName}}</span>
+        <div class="nav-item">
+            <ul *ngIf="role=='shopowner'">
+                <li><a routerLink="allProducts" routerLinkActive="active"><span>Products</span></a></li>
+                <li><a routerLink="allCustomers" routerLinkActive="active"><span>Customers</span></a></li>
+                <li><a routerLink="addCustomer" routerLinkActive="active" ><span>Add Customer</span></a></li>
+                <li><a routerLinkActive="active" routerLink="cart"><span>Cart</span></a></li>
+                <li><a routerLinkActive="active" routerLink="home" ><span>Home</span></a></li>
+               
+            </ul>
+            <ul>
+                <li><a (click)="logout()">LogOut</a></li>
+            </ul>
+        </div>
+    </mat-toolbar>
+</div>
+
+<router-outlet></router-outlet>
+

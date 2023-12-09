@@ -1,0 +1,68 @@
+.bill-container{
+    background-color: #e2e2e2;
+    min-height: 100%;
+    columns: 4;
+    column-gap: 10px;
+    padding: 20px;
+
+}
+
+.example-card{
+    background-color: white;
+    width: 350px;
+    margin: 10px;
+    height: fit-content;
+   break-inside: avoid;
+  
+}
+
+mat-card-title{
+    width: 100%;
+}
+
+mat-card-header{
+    margin-bottom: 10px;
+}
+
+mat-card-subtitle span{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.shop-title{
+    text-align: center;
+}
+
+.customer-name{
+    font-size: medium;
+}
+
+th{
+    border-bottom: 1px solid black;
+}
+td{
+    text-align: center;
+    padding: 5px;
+}
+
+.total{
+    padding: 0px 20px;
+    text-align: right;
+    font-size: large;
+}
+.total-amount{
+    font-weight: 600;
+}
+
+.paid, .balance{
+    text-align: center;  
+}
+
+.paid span{
+    padding-left: 15px;
+}
+
+.balance span{
+    padding-left: 15px;
+}
+
+

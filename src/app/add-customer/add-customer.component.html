@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="form-container">
+        <form (ngSubmit)="addCustomer()" class="customerRegister p-2">
+    
+            <h1>Create New Customer</h1>
+        
+            <mat-form-field appearance="outline">
+                <mat-label>Customer Name</mat-label>
+                <input [(ngModel)]="customer.name" name="name" matInput placeholder="Enter customer name">
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        
+            <mat-form-field appearance="outline">
+                <mat-label>Phone number</mat-label>
+                <input [(ngModel)]="customer.mobNo" name="mobile" matInput placeholder="Enter phone number">
+                <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field><br>
+        
+            <mat-form-field  appearance="outline">
+                <mat-label>Email Id</mat-label>
+                <input [(ngModel)]="customer.email" name="email" matInput placeholder="Enter email id">
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+          
+            
+            <mat-form-field appearance="outline">
+                <mat-label>Address</mat-label>
+                <textarea [(ngModel)]="customer.address" name="address" matInput placeholder="Enter shop address" ></textarea>
+                <mat-icon matSuffix>place</mat-icon>
+            </mat-form-field><br>
+        
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input [(ngModel)]="customer.password" name="password" type="password" matInput placeholder="Enter password">
+                <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+          
+            <mat-form-field appearance="outline">
+                <mat-label>Confirm Password</mat-label>
+                <input [(ngModel)]="confirmPass" name="confirmPass" matInput placeholder="Enter password">
+                <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field><br>
+            
+            <button type="reset" mat-raised-button color="warning">Reset</button>
+            <button type="submit" mat-raised-button color="warn">Register</button>
+
+           
+        </form>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.updateProduct{
+    text-align: center;
+    padding: 20px;
+}
+mat-form-field{
+    width: 75%;
+}
+
+.buttons{
+    width: 100%;
+}
+
+
+.updateProduct button{
+    margin: 20px 10px;
+}

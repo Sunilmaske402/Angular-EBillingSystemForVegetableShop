@@ -1,0 +1,34 @@
+<div class="all-customer">
+
+
+<div class="search">
+  <input matInput type="text" (keyup)="filterTable($event)"  placeholder="Search here by name......">
+</div>
+
+
+<table [cellSpacing]="0" [cellPadding]="5">
+  <thead>
+    <th>Sr.No.</th>
+    <th width="200px">Name</th>
+    <th>Mobile</th>
+    <th width="200px">Address</th>
+    <th>All Orders</th>
+    <th >Amt Balance</th>
+  </thead>
+    <tbody>
+      @for (item of customers; track item; let i=$index) {
+        <tr>
+            <td>{{i+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.mobNo}}</td>
+            <td>{{item.address}}</td>
+            <td> <button  mat-raised-button routerLink="bills/{{item.id}}" color="warn">View Orders</button></td>
+            <td>{{balanceAmtArray[i]}}</td>
+            
+        </tr>
+      }
+    </tbody>
+</table>
+
+
+</div>
